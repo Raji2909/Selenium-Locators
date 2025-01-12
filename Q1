@@ -1,0 +1,24 @@
+package org.test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Locators {
+   public static void main(String[]args) {
+	   
+	   WebDriverManager.firefoxdriver().setup();  
+	   
+	   WebDriver driver = new FirefoxDriver();
+
+       driver.manage().window().maximize();
+       
+       driver.get("http://google.com");
+   
+       System.out.println("Prints the Url of the Current page is:" + driver.getCurrentUrl());
+       
+       driver.close();
+       
+       System.out.println("Program Ran Successfully");     
+   }
+}
